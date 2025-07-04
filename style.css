@@ -1,4 +1,4 @@
-/* Futuristic Portfolio Styles for Buddha Citta */
+/* Buddha Citta Portfolio v3.0 - Advanced Futuristic Styles */
 
 /* Reset and Base */
 * {
@@ -48,6 +48,7 @@
   --z-background: -1;
   --z-content: 1;
   --z-nav: 100;
+  --z-cursor: 9999;
   --z-modal: 1000;
 }
 
@@ -64,24 +65,64 @@ body {
   cursor: none;
 }
 
-/* Custom Cursor */
-body::before {
-  content: '';
+/* Custom Cursor v3.0 */
+#custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
   width: 20px;
   height: 20px;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  mix-blend-mode: difference;
+}
+
+.cursor-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
   background: var(--quantum-cyan);
   border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-  transition: transform 0.1s ease;
+  transform: translate(-50%, -50%);
+  transition: all 0.1s ease;
   box-shadow: 0 0 20px var(--quantum-cyan);
 }
 
-/* Cosmic Background */
+.cursor-trail {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--quantum-cyan);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+
+.cursor-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cursor-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: var(--quantum-cyan);
+  border-radius: 50%;
+  animation: cursorParticleFloat 2s ease-out infinite;
+}
+
+/* Cosmic Background v3.0 */
 #cosmic-background {
   position: fixed;
   top: 0;
@@ -118,6 +159,28 @@ body::before {
   animation: nebulaDrift 30s ease-in-out infinite;
 }
 
+.quantum-field {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 100px,
+      rgba(0, 255, 255, 0.02) 100px,
+      rgba(0, 255, 255, 0.02) 101px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 100px,
+      rgba(255, 0, 255, 0.02) 100px,
+      rgba(255, 0, 255, 0.02) 101px
+    );
+  animation: quantumShift 15s ease-in-out infinite;
+}
+
 .planets {
   position: absolute;
   width: 100%;
@@ -151,7 +214,7 @@ body::before {
   animation-delay: -30s;
 }
 
-/* Navigation */
+/* Navigation v3.0 */
 .nav-system {
   position: fixed;
   top: 0;
@@ -249,7 +312,7 @@ body::before {
   transition: all var(--transition-normal);
 }
 
-/* Hero Section */
+/* Hero Section v3.0 */
 .hero-dimension {
   min-height: 100vh;
   display: flex;
@@ -331,6 +394,40 @@ body::before {
     rgba(0, 255, 255, 0.1) 4px
   );
   animation: scanAnimation 2s linear infinite;
+}
+
+.dna-helix {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  animation: dnaRotation 8s linear infinite;
+}
+
+.dna-helix::before,
+.dna-helix::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--quantum-cyan);
+  border-radius: 50%;
+  animation: dnaParticle 4s ease-in-out infinite;
+}
+
+.dna-helix::before {
+  top: 10%;
+  left: 50%;
+  animation-delay: 0s;
+}
+
+.dna-helix::after {
+  bottom: 10%;
+  right: 50%;
+  animation-delay: 2s;
 }
 
 .status-indicators {
@@ -497,7 +594,208 @@ body::before {
   animation: portalPulse 2s ease-in-out infinite;
 }
 
-/* Quantum Buttons */
+/* Bio Data Section v3.0 */
+.bio-dimension {
+  background: var(--cosmic-gradient);
+  padding: var(--space-xxl) 0;
+}
+
+.bio-matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xxl);
+  margin-bottom: var(--space-xxl);
+}
+
+.personal-data .data-card {
+  background: var(--phantom-white);
+  border: 1px solid var(--ghost-white);
+  border-radius: 15px;
+  padding: var(--space-xl);
+  backdrop-filter: blur(10px);
+}
+
+.data-card h3 {
+  font-family: var(--font-primary);
+  color: var(--quantum-cyan);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--ghost-white);
+}
+
+.info-item .label {
+  font-family: var(--font-primary);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.info-item .value {
+  color: var(--quantum-cyan);
+  font-weight: 600;
+}
+
+.life-timeline {
+  background: var(--phantom-white);
+  border: 1px solid var(--ghost-white);
+  border-radius: 15px;
+  padding: var(--space-xl);
+  backdrop-filter: blur(10px);
+}
+
+.timeline-container h3 {
+  font-family: var(--font-primary);
+  color: var(--quantum-cyan);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.timeline-graph {
+  position: relative;
+  height: 200px;
+  margin-bottom: var(--space-lg);
+}
+
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--quantum-gradient);
+  transform: translateY(-50%);
+}
+
+.timeline-points {
+  position: relative;
+  height: 100%;
+}
+
+.timeline-point {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.timeline-point.birth { left: 0; }
+.timeline-point.current { left: 31.25%; }
+.timeline-point.future { right: 0; }
+
+.point-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--quantum-cyan);
+  border: 3px solid var(--deep-space);
+  box-shadow: 0 0 20px var(--quantum-cyan);
+  animation: timelinePulse 2s ease-in-out infinite;
+}
+
+.timeline-point.current .point-marker {
+  background: var(--neural-green);
+  box-shadow: 0 0 20px var(--neural-green);
+}
+
+.point-label {
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  color: var(--energy-white);
+  text-align: center;
+}
+
+.age-progress {
+  margin-top: var(--space-lg);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--neural-gradient);
+  border-radius: 4px;
+  width: 31.25%;
+  animation: progressGlow 3s ease-in-out infinite;
+}
+
+.progress-stats {
+  text-align: center;
+  font-family: var(--font-primary);
+  color: var(--quantum-cyan);
+  font-size: 0.9rem;
+}
+
+.quantum-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+}
+
+.stat-card {
+  background: var(--phantom-white);
+  border: 1px solid var(--ghost-white);
+  border-radius: 15px;
+  padding: var(--space-lg);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  transition: all var(--transition-normal);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  width: 60px;
+  text-align: center;
+}
+
+.stat-info {
+  flex: 1;
+}
+
+.stat-number {
+  font-family: var(--font-primary);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--quantum-cyan);
+  margin-bottom: var(--space-xs);
+}
+
+.stat-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Quantum Buttons v3.0 */
 .quantum-btn {
   position: relative;
   display: inline-flex;
@@ -938,7 +1236,166 @@ section {
   box-shadow: 0 0 20px var(--quantum-cyan);
 }
 
-/* Contact Section */
+/* Blog Section v3.0 */
+.blog-dimension {
+  background: var(--deep-space);
+}
+
+.blog-interface {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-console {
+  background: var(--phantom-white);
+  border: 1px solid var(--ghost-white);
+  border-radius: 15px;
+  padding: var(--space-lg);
+  backdrop-filter: blur(10px);
+  margin-bottom: var(--space-xl);
+}
+
+.search-field {
+  position: relative;
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+#blog-search {
+  flex: 1;
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--ghost-white);
+  border-radius: 10px;
+  color: var(--energy-white);
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+}
+
+#blog-search:focus {
+  outline: none;
+  border-color: var(--quantum-cyan);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.search-btn {
+  padding: var(--space-md);
+  background: var(--quantum-gradient);
+  color: var(--void-black);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  font-size: 1rem;
+}
+
+.search-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.search-stats {
+  font-family: var(--font-primary);
+  color: var(--quantum-cyan);
+  font-size: 0.9rem;
+}
+
+.blog-results {
+  min-height: 400px;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  padding: var(--space-xxl);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--font-primary);
+}
+
+.quantum-loader {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 255, 255, 0.2);
+  border-top: 3px solid var(--quantum-cyan);
+  border-radius: 50%;
+  animation: quantumSpin 1s linear infinite;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.blog-result {
+  background: var(--phantom-white);
+  border: 1px solid var(--ghost-white);
+  border-radius: 15px;
+  padding: var(--space-lg);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.blog-result:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+  border-color: var(--quantum-cyan);
+}
+
+.blog-result h4 {
+  font-family: var(--font-primary);
+  color: var(--quantum-cyan);
+  margin-bottom: var(--space-sm);
+  font-size: 1.2rem;
+}
+
+.blog-result p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.blog-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.blog-url {
+  font-family: var(--font-primary);
+  color: var(--neural-green);
+}
+
+.load-more-btn {
+  width: 100%;
+  margin-top: var(--space-lg);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--quantum-gradient);
+  color: var(--void-black);
+  border: none;
+  border-radius: 30px;
+  font-family: var(--font-primary);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.load-more-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+}
+
+/* Contact Section v3.0 */
 .contact-dimension {
   background: var(--deep-space);
 }
@@ -1157,18 +1614,21 @@ section {
   justify-content: center;
   gap: var(--space-lg);
   margin-bottom: var(--space-md);
+  position: relative;
 }
 
 .earth-icon,
 .target-planet {
   font-size: 2rem;
+  z-index: 2;
 }
 
 .signal-path {
   position: relative;
-  width: 100px;
+  width: 200px;
   height: 2px;
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
 }
 
 .signal-beam {
@@ -1178,13 +1638,63 @@ section {
   width: 0;
   height: 100%;
   background: var(--quantum-gradient);
+  border-radius: 1px;
   transition: width 3s ease;
+}
+
+.message-packet {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3;
+}
+
+.message-packet.active {
+  opacity: 1;
+  animation: messageTravel 10s linear;
 }
 
 .status-text {
   font-family: var(--font-primary);
   color: var(--quantum-cyan);
   font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.transmission-progress {
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.transmission-progress.active {
+  opacity: 1;
+}
+
+.transmission-progress .progress-bar {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: var(--space-sm);
+}
+
+.transmission-progress .progress-fill {
+  height: 100%;
+  background: var(--neural-gradient);
+  border-radius: 3px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-family: var(--font-primary);
+  color: var(--quantum-cyan);
+  font-size: 0.9rem;
 }
 
 /* Footer */
@@ -1241,7 +1751,7 @@ section {
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Animations */
+/* Animations v3.0 */
 @keyframes twinkle {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
@@ -1252,6 +1762,11 @@ section {
   25% { transform: translateX(10px) translateY(-5px); }
   50% { transform: translateX(-5px) translateY(10px); }
   75% { transform: translateX(-10px) translateY(-10px); }
+}
+
+@keyframes quantumShift {
+  0%, 100% { transform: translateX(0) translateY(0); }
+  50% { transform: translateX(5px) translateY(5px); }
 }
 
 @keyframes planetOrbit {
@@ -1280,6 +1795,16 @@ section {
   100% { transform: translateY(100%); }
 }
 
+@keyframes dnaRotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dnaParticle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
 @keyframes statusBlink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
@@ -1305,6 +1830,16 @@ section {
   50% { opacity: 0.5; transform: translate(-50%, -50%) scale(0.8); }
 }
 
+@keyframes timelinePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes progressGlow {
+  0%, 100% { box-shadow: 0 0 10px var(--neural-green); }
+  50% { box-shadow: 0 0 20px var(--neural-green); }
+}
+
 @keyframes signalPulse {
   0% { opacity: 0; transform: translate(-50%, -50%) scale(0); }
   50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
@@ -1316,7 +1851,28 @@ section {
   100% { width: calc(var(--level) * 1%); }
 }
 
-/* Responsive Design */
+@keyframes quantumSpin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes messageTravel {
+  0% { left: 0; }
+  100% { left: calc(100% - 20px); }
+}
+
+@keyframes cursorParticleFloat {
+  0% { 
+    opacity: 1; 
+    transform: translate(0, 0) scale(1); 
+  }
+  100% { 
+    opacity: 0; 
+    transform: translate(var(--random-x, 20px), var(--random-y, -20px)) scale(0); 
+  }
+}
+
+/* Responsive Design v3.0 */
 @media (max-width: 768px) {
   .nav-controls {
     display: none;
@@ -1347,6 +1903,11 @@ section {
     height: 250px;
   }
   
+  .bio-matrix {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
   .transmission-center {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
@@ -1358,6 +1919,10 @@ section {
   }
   
   .footer-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .quantum-stats {
     grid-template-columns: 1fr;
   }
 }
@@ -1386,6 +1951,10 @@ section {
   
   .planets-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .signal-path {
+    width: 150px;
   }
 }
 
