@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Chronicles | Buddha Citta Blog</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+      .blog-header {
+        background: var(--cosmic-gradient);
+        padding: var(--space-xxl) 0;
+        text-align: center;
+        margin-top: 80px;
+      }
+      
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-xl);
+        margin-top: var(--space-xxl);
+      }
+      
+      .blog-card {
+        background: var(--phantom-white);
+        border: 1px solid var(--ghost-white);
+        border-radius: 15px;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        transition: all var(--transition-normal);
+      }
+      
+      .blog-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 255, 255, 0.2);
+      }
+      
+      .blog-image {
+        height: 200px;
+        background: var(--quantum-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        color: var(--void-black);
+      }
+      
+      .blog-content {
+        padding: var(--space-lg);
+      }
+      
+      .blog-title {
+        font-family: var(--font-primary);
+        color: var(--quantum-cyan);
+        margin-bottom: var(--space-sm);
+        font-size: 1.3rem;
+      }
+      
+      .blog-excerpt {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: var(--space-md);
+      }
+      
+      .blog-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: var(--space-md);
+      }
+      
+      .read-more-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+        color: var(--quantum-cyan);
+        text-decoration: none;
+        font-family: var(--font-primary);
+        font-weight: 600;
+        transition: all var(--transition-normal);
+      }
+      
+      .read-more-btn:hover {
+        color: var(--neural-green);
+        transform: translateX(5px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="nav-system">
+      <div class="nav-brand">
+        <div class="hologram-logo">
+          <span class="brand-text">Buddha Citta</span>
+          <span class="brand-subtitle">Digital Chronicles • Blog Archive</span>
+        </div>
+      </div>
+      <div class="nav-controls">
+        <a href="../index.html" class="nav-link">← Back to Portfolio</a>
+      </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+      <div class="container">
+        <h1 class="section-title">
+          <span class="title-glow">Digital Chronicles</span>
+        </h1>
+        <p class="section-subtitle">Exploring the intersection of consciousness, technology, and digital creativity</p>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="blog-section">
+      <div class="container">
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-image">🧠</div>
+            <div class="blog-content">
+              <h2 class="blog-title">Quantum Computing and Web Development</h2>
+              <div class="blog-meta">
+                <span>January 15, 2025</span>
+                <span>8 min read</span>
+              </div>
+              <p class="blog-excerpt">
+                Exploring how quantum computing principles can revolutionize web development, 
+                from quantum algorithms to superposition-based user interfaces.
+              </p>
+              <a href="blog1.html" class="read-more-btn">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">🤖</div>
+            <div class="blog-content">
+              <h2 class="blog-title">AI-Driven User Interface Design</h2>
+              <div class="blog-meta">
+                <span>January 10, 2025</span>
+                <span>6 min read</span>
+              </div>
+              <p class="blog-excerpt">
+                How artificial intelligence is reshaping the way we design and interact with 
+                digital interfaces, creating more intuitive and adaptive user experiences.
+              </p>
+              <a href="blog2.html" class="read-more-btn">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">🌐</div>
+            <div class="blog-content">
+              <h2 class="blog-title">The Future of Virtual Reality</h2>
+              <div class="blog-meta">
+                <span>January 5, 2025</span>
+                <span>10 min read</span>
+              </div>
+              <p class="blog-excerpt">
+                Diving deep into the evolution of VR technology and its potential to transform 
+                how we work, learn, and connect in digital spaces.
+              </p>
+              <a href="blog3.html" class="read-more-btn">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">⛓️</div>
+            <div class="blog-content">
+              <h2 class="blog-title">Blockchain Technology in Creative Industries</h2>
+              <div class="blog-meta">
+                <span>December 28, 2024</span>
+                <span>7 min read</span>
+              </div>
+              <p class="blog-excerpt">
+                Understanding how blockchain is revolutionizing creative industries, from NFTs 
+                to decentralized content creation and ownership.
+              </p>
+              <a href="blog4.html" class="read-more-btn">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">🧘</div>
+            <div class="blog-content">
+              <h2 class="blog-title">Mindful Design Principles</h2>
+              <div class="blog-meta">
+                <span>December 20, 2024</span>
+                <span>5 min read</span>
+              </div>
+              <p class="blog-excerpt">
+                Exploring how mindfulness and conscious design principles can create more 
+                meaningful and human-centered digital experiences.
+              </p>
+              <a href="blog5.html" class="read-more-btn">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">🕸️</div>
+            <div class="blog-content">
+              <h2 class="blog-title">Neural Networks and Creative AI</h2>
+              <div class="blog-meta">
+                <span>December 15, 2024</span>
+                <span>9 min read</span>
+              </div>
+              <p class="blog-excerpt">
+                How neural networks are enabling new forms of creative expression and 
+                collaborative AI-human design processes.
+              </p>
+              <a href="blog6.html" class="read-more-btn">
+                Read More <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-dimension">
+      <div class="container">
+        <div class="footer-bottom">
+          <p>&copy; 2025 Buddha Citta Digital Chronicles. All rights reserved across all dimensions.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
