@@ -1,20 +1,28 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buddha Citta | Digital Architect from Earth</title>
+    <title>Buddha Citta v3.0 | Digital Architect from Earth</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div id="custom-cursor">
+      <div class="cursor-core"></div>
+      <div class="cursor-trail"></div>
+      <div class="cursor-particles"></div>
+    </div>
+
     <!-- Cosmic Background -->
     <div id="cosmic-background">
       <div class="stars"></div>
       <div class="nebula"></div>
       <div class="planets"></div>
+      <div class="quantum-field"></div>
     </div>
 
     <!-- Navigation -->
@@ -22,14 +30,16 @@
       <div class="nav-brand">
         <div class="hologram-logo">
           <span class="brand-text">Buddha Citta</span>
-          <span class="brand-subtitle">Digital Architect • Earth Sector 7</span>
+          <span class="brand-subtitle">Digital Architect • Earth Sector 7 • v3.0</span>
         </div>
       </div>
       <div class="nav-controls">
         <a href="#home" class="nav-link active" data-planet="earth">Origin</a>
         <a href="#about" class="nav-link" data-planet="mars">Profile</a>
+        <a href="#bio" class="nav-link" data-planet="venus">Bio Data</a>
         <a href="#skills" class="nav-link" data-planet="jupiter">Arsenal</a>
         <a href="#projects" class="nav-link" data-planet="saturn">Creations</a>
+        <a href="#blog" class="nav-link" data-planet="uranus">Blog</a>
         <a href="#contact" class="nav-link" data-planet="neptune">Transmission</a>
       </div>
       <div class="nav-toggle">
@@ -45,9 +55,10 @@
         <div class="identity-core">
           <div class="avatar-chamber">
             <div class="holographic-frame">
-              <img src="buddhacitta.webp?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Buddha Citta" class="avatar-projection">
+              <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&fit=crop" alt="Buddha Citta" class="avatar-projection">
               <div class="energy-field"></div>
               <div class="scan-lines"></div>
+              <div class="dna-helix"></div>
             </div>
             <div class="status-indicators">
               <div class="indicator active">
@@ -57,6 +68,10 @@
               <div class="indicator">
                 <span class="dot"></span>
                 <span class="label">Earth • GMT+0</span>
+              </div>
+              <div class="indicator">
+                <span class="dot"></span>
+                <span class="label">Age: <span id="current-age">24</span></span>
               </div>
             </div>
           </div>
@@ -72,7 +87,8 @@
             <p class="bio-stream">
               Crafting tomorrow's digital experiences today. Specializing in immersive web technologies, 
               AI-driven interfaces, and quantum-inspired design systems that bridge the gap between 
-              human consciousness and digital reality.
+              human consciousness and digital reality. Born on September 26, 2000, I've dedicated my life 
+              to pushing the boundaries of what's possible in the digital realm.
             </p>
             <div class="action-matrix">
               <button class="quantum-btn primary" id="explore-btn">
@@ -162,6 +178,111 @@
               <span class="node-label">Innovation</span>
             </div>
             <div class="neural-connections"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bio Data Section -->
+    <section id="bio" class="bio-dimension">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-glow">Bio Data Matrix</span>
+          </h2>
+          <p class="section-subtitle">Life timeline and quantum statistics</p>
+        </div>
+        <div class="bio-matrix">
+          <div class="personal-data">
+            <div class="data-card">
+              <h3>Personal Information</h3>
+              <div class="info-grid">
+                <div class="info-item">
+                  <span class="label">Full Name:</span>
+                  <span class="value">Buddha Citta</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Birth Date:</span>
+                  <span class="value">September 26, 2000</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Current Age:</span>
+                  <span class="value" id="detailed-age">24 years, 2 months, 15 days</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Location:</span>
+                  <span class="value">Earth • Sector 7</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Profession:</span>
+                  <span class="value">Digital Architect</span>
+                </div>
+                <div class="info-item">
+                  <span class="label">Experience:</span>
+                  <span class="value">5+ Years</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="life-timeline">
+            <div class="timeline-container">
+              <h3>Life Timeline</h3>
+              <div class="timeline-graph">
+                <div class="timeline-line"></div>
+                <div class="timeline-points">
+                  <div class="timeline-point birth" data-year="2000">
+                    <div class="point-marker"></div>
+                    <div class="point-label">Birth</div>
+                  </div>
+                  <div class="timeline-point current" data-year="2025">
+                    <div class="point-marker"></div>
+                    <div class="point-label">Now</div>
+                  </div>
+                  <div class="timeline-point future" data-year="2080">
+                    <div class="point-marker"></div>
+                    <div class="point-label">Future</div>
+                  </div>
+                </div>
+                <div class="age-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" id="life-progress"></div>
+                  </div>
+                  <div class="progress-stats">
+                    <span>Life Progress: <span id="life-percentage">31.25%</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="quantum-stats">
+          <div class="stat-card">
+            <div class="stat-icon">🧬</div>
+            <div class="stat-info">
+              <div class="stat-number" id="days-lived">9,131</div>
+              <div class="stat-desc">Days Lived</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">💓</div>
+            <div class="stat-info">
+              <div class="stat-number" id="heartbeats">876M</div>
+              <div class="stat-desc">Heartbeats</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">🌍</div>
+            <div class="stat-info">
+              <div class="stat-number" id="earth-rotations">9,131</div>
+              <div class="stat-desc">Earth Rotations</div>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">☀️</div>
+            <div class="stat-info">
+              <div class="stat-number" id="solar-orbits">25</div>
+              <div class="stat-desc">Solar Orbits</div>
+            </div>
           </div>
         </div>
       </div>
@@ -346,6 +467,44 @@
       </div>
     </section>
 
+    <!-- Blog Section -->
+    <section id="blog" class="blog-dimension">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-glow">Digital Chronicles</span>
+          </h2>
+          <p class="section-subtitle">Thoughts from the quantum realm</p>
+        </div>
+        <div class="blog-interface">
+          <div class="search-console">
+            <div class="search-field">
+              <input type="text" id="blog-search" placeholder="Search the digital archives...">
+              <button class="search-btn" id="search-trigger">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <div class="search-stats">
+              <span id="search-results-count">0 results found</span>
+            </div>
+          </div>
+          <div class="blog-results" id="blog-results">
+            <div class="loading-state" id="search-loading">
+              <div class="quantum-loader"></div>
+              <span>Scanning digital archives...</span>
+            </div>
+            <div class="results-container" id="results-container">
+              <!-- Search results will be populated here -->
+            </div>
+            <button class="load-more-btn" id="load-more-btn" style="display: none;">
+              <span class="btn-text">Load More Archives</span>
+              <div class="quantum-particles"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-dimension">
       <div class="container">
@@ -421,10 +580,17 @@
             <div class="earth-icon">🌍</div>
             <div class="signal-path">
               <div class="signal-beam"></div>
+              <div class="message-packet" id="message-packet">📡</div>
             </div>
             <div class="target-planet">🪐</div>
           </div>
           <div class="status-text">Ready to transmit</div>
+          <div class="transmission-progress" id="transmission-progress">
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+            <div class="progress-text">0%</div>
+          </div>
         </div>
       </div>
     </section>
@@ -436,7 +602,7 @@
           <div class="footer-brand">
             <div class="brand-hologram">
               <span class="brand-text">Buddha Citta</span>
-              <span class="brand-subtitle">Digital Architect • Earth Sector 7</span>
+              <span class="brand-subtitle">Digital Architect • Earth Sector 7 • v3.0</span>
             </div>
             <p class="footer-bio">
               Bridging consciousness and technology through mindful digital experiences.
@@ -447,8 +613,10 @@
               <h4>Navigation</h4>
               <a href="#home" class="footer-link">Origin</a>
               <a href="#about" class="footer-link">Profile</a>
+              <a href="#bio" class="footer-link">Bio Data</a>
               <a href="#skills" class="footer-link">Arsenal</a>
               <a href="#projects" class="footer-link">Creations</a>
+              <a href="#blog" class="footer-link">Blog</a>
             </div>
             <div class="link-cluster">
               <h4>Connections</h4>
@@ -460,7 +628,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2025 Buddha Citta. All rights reserved across all dimensions.</p>
+          <p>&copy; 2025 Buddha Citta v3.0. All rights reserved across all dimensions.</p>
         </div>
       </div>
     </footer>
