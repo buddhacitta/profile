@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Shop | Buddha Citta Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    <div class="particles"></div>
+    
+    <!-- Global Search Overlay -->
+    <div class="global-search-overlay">
+        <div class="global-search-container">
+            <div class="global-search-header">
+                <h3 class="global-search-title">Search Everything</h3>
+                <button class="search-close">×</button>
+            </div>
+            <input type="text" class="global-search-input" placeholder="Search for blogs, shop items, or keywords...">
+            
+            <div class="search-loading">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">Searching<span class="loading-dots"></span></div>
+            </div>
+            
+            <div class="global-search-results"></div>
+        </div>
+    </div>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="cyber-text">BUDDHA CITTA</span>
+            </div>
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                    <li><a href="biodata.html" class="nav-link">Bio Data</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="shop.html" class="nav-link active">Shop</a></li>
+                </ul>
+                <div class="nav-link search-icon" title="Search Everything">
+                    <span class="search-text">Search</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="page-container">
+            <h1 class="page-title">Digital Marketplace</h1>
+            
+            <div class="content-card">
+                <div class="shop-intro">
+                    <p style="text-align: center; font-size: 1.2rem; color: #cccccc; margin-bottom: 2rem;">
+                        Premium websites and digital solutions crafted with futuristic design and cutting-edge technology.
+                    </p>
+                </div>
+                
+                <div class="shop-search-container">
+                    <input type="text" id="shopSearch" class="search-input" placeholder="Search shop items by name, category, or features...">
+                </div>
+                
+                <div id="shopSearchResults"></div>
+                
+                <div class="shop-grid" id="shopGrid">
+                    <!-- Shop items will be dynamically loaded here -->
+                </div>
+                
+                <div class="load-more-container" id="loadMoreContainer">
+                    <button class="load-more-btn" id="loadMoreBtn">
+                        <span class="btn-icon">⚡</span>
+                        <span class="btn-text">Load More Items</span>
+                        <span class="btn-arrow">↓</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Buddha Citta. All rights reserved. | "Kiccho manussa patilabho"</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
